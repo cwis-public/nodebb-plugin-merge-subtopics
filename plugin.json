@@ -1,0 +1,15 @@
+{
+    "id": "nodebb-plugin-merge-subtopics",
+    "name": "Merge Sub-Topics",
+    "description": "Merge topics from sub-categories into /category views.",
+    "url": "https://github.com/cwis-public/nodebb-plugin-merge-subtopics",
+    "library": "./index.js",
+    "staticDirs": {},
+    "less": [],
+    "hooks": [{
+        "hook": "filter:category.topics.prepare",
+        "method": "filterTopicsPrepare"
+    }],
+    "scripts": [],
+    "acpScripts": []
+}
