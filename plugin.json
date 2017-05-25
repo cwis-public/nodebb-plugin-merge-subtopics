@@ -9,6 +9,9 @@
     "hooks": [{
         "hook": "filter:category.topics.prepare",
         "method": "filterTopicsPrepare"
+    }, {
+        "hook": "static:app.load",
+        "method": "init"
     }],
     "scripts": [],
     "acpScripts": []
