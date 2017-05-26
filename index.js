@@ -18,7 +18,7 @@ exports.filterTopicsPrepare = function(data, callback) {
 	});
 };
 
-exports.init = function init(callback) {
+exports.init = function init(params, callback) {
 	var orig_getSortedSetRevIntersect = db.getSortedSetRevIntersect;
 	db.getSortedSetRevIntersect = function(params, callback) {
 		var sets = params.sets;
