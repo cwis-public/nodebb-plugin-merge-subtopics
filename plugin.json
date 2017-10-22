@@ -7,7 +7,7 @@
     "staticDirs": {},
     "less": [],
     "hooks": [{
-        "hook": "filter:category.topics.prepare",
+        "hook": "filter:categories.buildTopicsSortedSet",
         "method": "filterTopicsPrepare"
     }, {
         "hook": "static:app.load",
