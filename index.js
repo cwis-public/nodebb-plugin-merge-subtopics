@@ -53,10 +53,10 @@
 
   function getCategoryIDs(cid, resolve) {
     var _key = new RegExp("^" + "category:");
-    var mongo = db.sessionStore.db; // get direct mongo db object
+    var dbClient = db.client; // get the database client
     var find = { parentCid: cid.toString(), _key: { $regex: _key } };
     var option = { cid: true };
-    mongo
+    dbClient
       .collection("objects")
       .find(find, option)
       .toArray(function(err, response) {
